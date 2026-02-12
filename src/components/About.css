@@ -1,0 +1,66 @@
+/* About Styles */
+.about {
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.03) 0%, rgba(0, 204, 153, 0.03) 100%);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  position: relative;
+  padding: 2.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), transparent);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  opacity: 0.2;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+.feature-card p {
+  color: var(--gray-text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 2rem;
+  }
+
+  .feature-number {
+    font-size: 2rem;
+  }
+}

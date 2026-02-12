@@ -1,0 +1,68 @@
+/* Process Styles */
+.process {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 204, 153, 0.03) 50%, transparent 100%);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.process-card {
+  position: relative;
+  padding: 2.5rem;
+  border-top: 3px solid var(--primary-color);
+}
+
+.process-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.process-card:hover::after {
+  transform: scaleX(1);
+}
+
+.process-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  opacity: 0.15;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', monospace;
+}
+
+.process-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+.process-card p {
+  color: var(--gray-text);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    padding: 2rem;
+  }
+
+  .process-number {
+    font-size: 2rem;
+  }
+}
