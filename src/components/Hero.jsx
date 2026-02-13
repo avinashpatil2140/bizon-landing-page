@@ -8,7 +8,7 @@ export default function Hero() {
           <div className="hero-text">
             <h2 className="hero-title">Accelerate Your Brand Growth with BizOn Digital</h2>
             <p className="hero-subtitle">
-              Transform Clicks Into Customers With Data-Driven Marketing. We combine strategic planning, creative excellence, and performance-driven campaigns to boost your ROI.
+              We are Website Design Company in Pune. We Transform Clicks Into Customers With Data-Driven Marketing. We combine strategic planning, creative excellence, and performance-driven campaigns to boost your ROI.
             </p>
             <div className="hero-buttons">
               <a href="https://bizondigital.com/contact" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Get Your Free Marketing Audit</a>
